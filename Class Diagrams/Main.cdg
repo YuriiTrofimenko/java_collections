@@ -40,11 +40,6 @@
         <Method name="getName" returnType="void" visibility="public"/>
       </Methods>
     </Class>
-    <Interface name="ISoundable" package="" visibility="public" xPosition="227.0" yPosition="325.0">
-      <Methods>
-        <Method name="sound" returnType="void" visibility="public"/>
-      </Methods>
-    </Interface>
     <Class name="Leopard" package="" visibility="public" xPosition="13.0" yPosition="544.0">
       <Fields/>
       <Constructors/>
@@ -53,19 +48,34 @@
         <Method name="sound" returnType="void" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="Goldfish" package="" visibility="public" xPosition="437.0" yPosition="544.0">
+    <Class name="Goldfish" package="" visibility="public" xPosition="632.0" yPosition="544.0">
       <Fields/>
       <Constructors/>
       <Methods>
         <Method name="breathe" returnType="void" visibility="public"/>
       </Methods>
     </Class>
+    <Interface name="ISoundable" package="" visibility="public" xPosition="215.0" yPosition="319.0">
+      <Methods>
+        <Method name="sound" returnType="void" visibility="public"/>
+      </Methods>
+    </Interface>
+    <Class name="Cat" package="" visibility="public" xPosition="364.0" yPosition="554.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="breathe" returnType="void" visibility="public"/>
+        <Method name="sound" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
   </ClassDiagramComponents>
   <ClassDiagramRelations>
-    <IsRelation name="is" source="Leopard" target="AbstractWild"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Cat" target="ISoundable"/>
     <IsRelation name="is" source="Goldfish" target="AbstractPet"/>
-    <IsRelation name="is" source="AbstractWild" target="AbtractAnimal"/>
+    <IsRelation name="is" source="Leopard" target="AbstractWild"/>
+    <IsRelation name="is" source="Cat" target="AbstractPet"/>
     <IsRelation name="is" source="AbstractPet" target="AbtractAnimal"/>
     <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Leopard" target="ISoundable"/>
+    <IsRelation name="is" source="AbstractWild" target="AbtractAnimal"/>
   </ClassDiagramRelations>
 </ClassDiagram>
